@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kate\\Desktop\\GameStore\\GameStore.Api\\GameStore.Api.csproj": {}
+    "C:\\Users\\Kate\\Desktop\\GameStore\\GameStore.Client\\GameStore.Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kate\\Desktop\\GameStore\\GameStore.Api\\GameStore.Api.csproj": {
+    "C:\\Users\\Kate\\Desktop\\GameStore\\GameStore.Client\\GameStore.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kate\\Desktop\\GameStore\\GameStore.Api\\GameStore.Api.csproj",
-        "projectName": "GameStore.Api",
-        "projectPath": "C:\\Users\\Kate\\Desktop\\GameStore\\GameStore.Api\\GameStore.Api.csproj",
+        "projectUniqueName": "C:\\Users\\Kate\\Desktop\\GameStore\\GameStore.Client\\GameStore.Client.csproj",
+        "projectName": "GameStore.Client",
+        "projectPath": "C:\\Users\\Kate\\Desktop\\GameStore\\GameStore.Client\\GameStore.Client.csproj",
         "packagesPath": "C:\\Users\\Kate\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kate\\Desktop\\GameStore\\GameStore.Api\\obj\\",
+        "outputPath": "C:\\Users\\Kate\\Desktop\\GameStore\\GameStore.Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,27 +44,26 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "Asp.Versioning.Http": {
+            "Microsoft.AspNetCore.Components.WebAssembly": {
               "target": "Package",
-              "version": "[8.1.0, )"
+              "version": "[8.0.1, )"
             },
-            "Microsoft.AspNetCore.Authentication.JwtBearer": {
-              "target": "Package",
-              "version": "[8.0.10, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.10, )"
+              "version": "[8.0.1, )"
             },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
+            "Microsoft.NET.ILLink.Tasks": {
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.10, )"
+              "version": "[8.0.1, )",
+              "autoReferenced": true
             },
-            "MinimalApis.Extensions": {
+            "Microsoft.NET.Sdk.WebAssembly.Pack": {
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[0.11.0, )"
+              "version": "[8.0.1, )",
+              "autoReferenced": true
             }
           },
           "imports": [
@@ -78,15 +77,23 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Runtime.Mono.browser-wasm",
+              "version": "[8.0.1, 8.0.1]"
+            }
+          ],
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "browser-wasm": {
+          "#import": []
         }
       }
     }
