@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nOqXxNuY3FPCs3htGLiRIfdLX+xvGJVP50BBjaPesXXKGr8gNCl15OY1855lKRSl++K6zPLt9iPY6XRT+iot+A==",
+  "dgSpecHash": "GgWyY49WSmZ2+fFenn1GWpV2ASEN4IzVkDhXSZC2eJzSrsj1CEv69PH+RBCDQzBtguSy8numedAjHepXs5I49Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kate\\Desktop\\GameStore.Client\\GameStore.Client.csproj",
+  "projectFilePath": "C:\\Users\\Kate\\Desktop\\GameStore\\GameStore.Client\\GameStore.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kate\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.0\\microsoft.aspnetcore.authorization.8.0.0.nupkg.sha512",
     "C:\\Users\\Kate\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.0\\microsoft.aspnetcore.components.8.0.0.nupkg.sha512",

@@ -1,4 +1,5 @@
 using GameStore.Api.Authorization;
+using GameStore.Api.Cors;
 using GameStore.Api.Data;
 using GameStore.Api.Endpoints;
 using GameStore.Api.ErrorHandling;
@@ -7,7 +8,10 @@ using GameStore.Api.Middleware;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRepositories(builder.Configuration); // extension for repositories
 
-builder.Services.AddAuthentication().AddJwtBearer();
+builder.Services.AddAuthentication()
+                .AddJwtBearer()
+                .AddJwtBearer("Auth0");
+
 builder.Services.AddGameStoreAuthorization(); // extension for authorization
 builder.Services.AddApiVersioning(options =>
 {
@@ -15,25 +19,15 @@ builder.Services.AddApiVersioning(options =>
     options.AssumeDefaultVersionWhenUnspecified = true;
 });
 
-builder.Services.AddCors(options =>
-{
-    options.AddDefaultPolicy(corsBuilder =>
-    {
-        var allowerOrigin = builder.Configuration["AllowedOrigin"]
-                            ?? throw new InvalidOperationException("AllowedOrigin is not set");
-        corsBuilder.WithOrigins(allowerOrigin)
-                   .AllowAnyHeader()
-                   .AllowAnyMethod();
-    });
-});
-
 builder.Services.AddHttpLogging(o => { });
+
+builder.Services.AddGameStoreCors(builder.Configuration);
 
 var app = builder.Build();
 
 app.UseExceptionHandler(ExceptionHandlerApp => ExceptionHandlerApp.ConfigureExceptionHandler());
 
-app.UseMiddleware<RequestTimingMiddleware>();
+app.UseMiddleware<RequestTimingMiddleware>(); // custom middleware 
 
 await app.Services.InitializeDbAsync(); // extension for Db Migrations
 
