@@ -25,7 +25,7 @@ internal class DefaultAuth0OidcOptionsConfiguration : IPostConfigureOptions<Remo
         var logoutUri = options.ProviderOptions.PostLogoutRedirectUri;
         if (logoutUri == null || !Uri.TryCreate(logoutUri, UriKind.Absolute, out _))
         {
-            logoutUri ??= "authentication/logout-callback";
+            logoutUri ??= "/";
             options.ProviderOptions.PostLogoutRedirectUri = _navigationManager
                 .ToAbsoluteUri(logoutUri).AbsoluteUri;
         }

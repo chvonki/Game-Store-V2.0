@@ -16,7 +16,8 @@ public static class CorsExtensions
                                     ?? throw new InvalidOperationException("AllowedOrigin is not set");
                 corsBuilder.WithOrigins(allowerOrigin)
                            .AllowAnyHeader()
-                           .AllowAnyMethod();
+                           .AllowAnyMethod()
+                           .WithExposedHeaders("X-Pagination");
             });
         });
     }
