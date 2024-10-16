@@ -143,3 +143,9 @@ C:\Users\Kate\Desktop\GameStore\GameStore.Api\bin\Debug\net8.0\runtimes\win\lib\
 C:\Users\Kate\Desktop\GameStore\GameStore.Api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Kate\Desktop\GameStore\GameStore.Api\bin\Debug\net8.0\Asp.Versioning.Abstractions.dll
 C:\Users\Kate\Desktop\GameStore\GameStore.Api\bin\Debug\net8.0\Asp.Versioning.Http.dll
+C:\Users\Kate\Desktop\GameStore\GameStore.Api\bin\Debug\net8.0\Asp.Versioning.Mvc.dll
+C:\Users\Kate\Desktop\GameStore\GameStore.Api\bin\Debug\net8.0\Asp.Versioning.Mvc.ApiExplorer.dll
+C:\Users\Kate\Desktop\GameStore\GameStore.Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Kate\Desktop\GameStore\GameStore.Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Kate\Desktop\GameStore\GameStore.Api\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Kate\Desktop\GameStore\GameStore.Api\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
